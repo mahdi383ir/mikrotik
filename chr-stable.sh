@@ -8,9 +8,9 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 echo "Preparation ..."
-apt install unzip curl -y  # اضافه کردن curl برای گرفتن نسخه
+apt install unzip curl -y
 
-# پیدا کردن آخرین نسخه Stable به‌صورت خودکار
+
 echo "Fetching the latest MikroTik CHR Stable version..."
 CHR_VERSION=$(curl -s https://mikrotik.com/download | grep -oP 'chr-\K[0-9]+\.[0-9]+\.[0-9]+(?=\.img\.zip)' | sort -V | tail -n 1)
 
