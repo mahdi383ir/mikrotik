@@ -1,17 +1,25 @@
 #!/usr/bin/env bash
-#Auto install Mikrotik Chr Last Version
-#by mahdi
-# Must be root !
+# Auto install Mikrotik CHR Latest Stable Version
+# by mahdi
+# Must be root!
 if [[ $EUID -ne 0 ]]; then
    echo "This script must be run as root" 
    exit 1
 fi
 
 echo "Preparation ..."
-apt install unzip -y
+apt install unzip curl -y  # اضافه کردن curl برای گرفتن نسخه
 
-# Latest Stable
-CHR_VERSION=7.18.1
+# پیدا کردن آخرین نسخه Stable به‌صورت خودکار
+echo "Fetching the latest MikroTik CHR Stable version..."
+CHR_VERSION=$(curl -s https://mikrotik.com/download | grep -oP 'chr-\K[0-9]+\.[0-9]+\.[0-9]+(?=\.img\.zip)' | sort -V | tail -n 1)
+
+if [ -z "$CHR_VERSION" ]; then
+   echo "Failed to fetch the latest version. Please check your internet connection or the MikroTik website."
+   exit 1
+fi
+
+echo "Latest Stable CHR Version found: $CHR_VERSION"
 
 # Environment
 DISK=$(lsblk | grep "disk" | head -n 1 | cut -d' ' -f1)
@@ -32,3 +40,5 @@ echo "/ip address add address=${INTERFACE_IP} interface=[/interface ethernet fin
 umount /mnt
 echo u > /proc/sysrq-trigger
 dd if=chr-$CHR_VERSION.img of=/dev/${DISK} bs=100M
+
+echo "Installation completed. Please reboot the system to start MikroTik CHR $CHR_VERSION."
