@@ -4,7 +4,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/mahdi383ir/mikrotik/refs/heads
 ```
 
 This script has been tested for the following datacenters and will work with complete confidence:
-- [Hetzner](https://hetzner.cloud)
+- [Hetzner](https://www.hetzner.com)
 - [Aryananet](https://my.aryananet.com)
 - [HostVDS](https://hostvds.com)
 - [ParsSafe](https://parssafe.com)
