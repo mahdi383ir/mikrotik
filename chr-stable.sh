@@ -1,3 +1,4 @@
+bash automatic-test.sh 7.16.2
 #!/usr/bin/env bash
 # Auto install Mikrotik CHR (Latest Stable or Specific Version)
 # by mahdi
