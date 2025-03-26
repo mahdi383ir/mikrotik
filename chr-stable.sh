@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Auto install Mikrotik CHR (Latest Stable or Specific Version)
-# by mahdi
+# by @mahdi_383ir (Telegram)
 # Must be root!
 if [[ $EUID -ne 0 ]]; then
    echo "This script must be run as root" 
