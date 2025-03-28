@@ -1,15 +1,15 @@
 Run this to install the latest version of MikroTik CHR
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/mahdi383ir/mikrotik/refs/heads/main/chr-stable.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/mahdi383ir/mikrotik/refs/heads/main/automaticinstallation.sh)
 ```
 or, Use these commands to install the desired version:
 ```
-wget https://raw.githubusercontent.com/mahdi383ir/mikrotik/refs/heads/main/chr-stable.sh
+wget https://raw.githubusercontent.com/mahdi383ir/mikrotik/refs/heads/main/automaticinstallation.sh
 bash chr-stable.sh <version>
 ```
 In the commands above, replace <version> with your desired version number. For example, the following commands are for installing version 7.16.2.
 ```
-wget https://raw.githubusercontent.com/mahdi383ir/mikrotik/refs/heads/main/chr-stable.sh
+wget https://raw.githubusercontent.com/mahdi383ir/mikrotik/refs/heads/main/automaticinstallation.sh
 bash chr-stable.sh 7.16.2
 ```
 After executing this commands, restart the server using the `reboot` command.  
