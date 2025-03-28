@@ -53,5 +53,3 @@ echo u > /proc/sysrq-trigger
 dd if=chr-$CHR_VERSION.img of=/dev/${DISK} bs=100M
 
 echo "Installation completed. Please reboot the system to start MikroTik CHR $CHR_VERSION."
-
-reboot
