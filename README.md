@@ -5,12 +5,12 @@ bash <(curl -Ls https://raw.githubusercontent.com/mahdi383ir/mikrotik/refs/heads
 or, Use these commands to install the desired version:
 ```
 wget https://raw.githubusercontent.com/mahdi383ir/mikrotik/refs/heads/main/install.sh
-bash chr-stable.sh <version>
+bash install.sh <version>
 ```
 In the commands above, replace <version> with your desired version number. For example, the following commands are for installing version 7.16.2.
 ```
 wget https://raw.githubusercontent.com/mahdi383ir/mikrotik/refs/heads/main/install.sh
-bash chr-stable.sh 7.16.2
+bash install.sh 7.16.2
 ```
 After executing this commands, restart the server using the `reboot` command.  
 There is a possibility that after entering the `reboot` command, the terminal may return an error, and the server may not restart. In this case, you must perform a hard reboot via the server's management panel.
