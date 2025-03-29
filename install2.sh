@@ -44,8 +44,7 @@ unzip routeros.zip && rm -rf routeros.zip
 mount -o loop,offset=512 chr-$CHR_VERSION.img /mnt
 
 # Set initial CHR configuration
-echo "/ip service disable api,api-ssl,ftp,telnet,www,www-ssl
-/ip service enable ssh,winbox
+echo "/ip service disable api
 /ip address add address=${INTERFACE_IP} interface=[/interface ethernet find where name=ether1]
 /ip route add gateway=${INTERFACE_GATEWAY}
 " > /mnt/rw/autorun.scr
