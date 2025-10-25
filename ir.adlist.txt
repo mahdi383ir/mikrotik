@@ -3,3 +3,5 @@
 0.0.0.0 www.googleadservices.com
 0.0.0.0 googleadservices.com
 0.0.0.0 yt3.ggpht.com
+0.0.0.0 rr3---sn-4g5e6nzz.googlevideo.com
+0.0.0.0 *.googlevideo.com
