@@ -1,1 +1,5 @@
 0.0.0.0 file3.soft98.ir
+0.0.0.0 i.ytimg.com
+0.0.0.0 www.googleadservices.com
+0.0.0.0 googleadservices.com
+0.0.0.0 yt3.ggpht.com
