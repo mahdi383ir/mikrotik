@@ -1,15 +1,14 @@
-Run this command to install the latest stable version of MikroTik CHR:
-```bash
-bash <(curl -Ls [https://raw.githubusercontent.com/mahdi383ir/mikrotik/refs/heads/main/install.sh](https://raw.githubusercontent.com/mahdi383ir/mikrotik/refs/heads/main/install.sh))
+Run this to install the latest version of MikroTik CHR
 ```
-
-Or use this command to install a specific version:
-```bash
-bash <(curl -Ls [https://raw.githubusercontent.com/mahdi383ir/mikrotik/refs/heads/main/install.sh](https://raw.githubusercontent.com/mahdi383ir/mikrotik/refs/heads/main/install.sh)) <version>
+bash <(curl -Ls https://raw.githubusercontent.com/mahdi383ir/mikrotik/refs/heads/main/install.sh)
 ```
-In the command above, replace `<version>` with your desired version number. For example, the following command is for installing version `7.25.1`:
-```bash
-bash <(curl -Ls [https://raw.githubusercontent.com/mahdi383ir/mikrotik/refs/heads/main/install.sh](https://raw.githubusercontent.com/mahdi383ir/mikrotik/refs/heads/main/install.sh)) 7.25.1
+or, Use these command to install the desired version:
+```
+bash <(curl -Ls https://raw.githubusercontent.com/mahdi383ir/mikrotik/refs/heads/main/install.sh) <version>
+```
+In the command above, replace <version> with your desired version number. For example, the following command are for installing version 7.25.1.
+```
+bash <(curl -Ls https://raw.githubusercontent.com/mahdi383ir/mikrotik/refs/heads/main/install.sh) 7.25.1
 ```
 
 > **Note:** If you did not enable automatic sysrq reboot in the script, restart the server using the `reboot` command after execution. If the terminal returns an error due to disk overwrite, perform a hard reboot via your server's management panel.
